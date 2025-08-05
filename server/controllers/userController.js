@@ -72,10 +72,10 @@ export const updateProfile = async (req,res)=>{
         let updatedUser
 
         // If profilePic is empty, null, or matches the default, set to default avatar
-        if (!profilePic) {
+        if (profilePic==="") {
           updatedUser = await User.findByIdAndUpdate(
             userId,
-            { profilePic: "", bio, fullName },
+            { profilePic: "https://res.cloudinary.com/diqgen7mw/image/upload/v1754404242/kgnns2yakwmqe8o0ohkm.png", bio, fullName },
             { new: true }
           );
         } 

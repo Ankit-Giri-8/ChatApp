@@ -63,10 +63,6 @@ export const AuthProvider = ({children})=>{
     //update profile
     const updateProfile = async(body)=>{
         try {
-            // If profilePic is an empty string, set to default avatar icon
-            if (body.profilePic === "") {
-                body.profilePic = assets.avatar_icon;
-            }
             const {data} = await axios.put("/api/auth/update-profile", body)
             if(data.success){
                 setAuthUser(data.user)
