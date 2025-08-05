@@ -3,7 +3,8 @@ import { generateToken } from "../lib/utils.js"
 import User from "../models/User.js"
 import bcrypt from "bcryptjs"
 
-const DEFAULT_AVATAR = "/src/assets/avatar_icon.png";
+const DEFAULT_AVATAR =
+  "https://res.cloudinary.com/diqgen7mw/image/upload/v1754404348/vqyklwrnhgefydvil1fl.png";
 
 //sign up
 export const signup = async (req,res)=>{
