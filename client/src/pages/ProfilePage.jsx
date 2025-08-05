@@ -64,7 +64,7 @@ const ProfilePage = () => {
               className={`w-12 h-12 ${selectedImage && "rounded-full"} rounded-full`}
             />
             <span>Upload Profile Image</span>
-            {authUser.profilePic !== assets.avatar_icon && authUser.profilePic !== "" && (
+            {authUser.profilePic !== assets.avatar_icon && authUser.profilePic !== "" && authUser.profilePic !== "https://res.cloudinary.com/diqgen7mw/image/upload/v1754404242/kgnns2yakwmqe8o0ohkm.png" && (
               <button 
                 type="submit"
                 onClick={handleRemoveProfilePic}
